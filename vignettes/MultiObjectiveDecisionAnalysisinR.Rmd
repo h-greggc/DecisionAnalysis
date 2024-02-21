@@ -22,6 +22,11 @@ library(knitr)
 library(Cairo)
 ```
 
+```{R}
+# Added to update to AWS vignette
+devtools::install_github("AFIT-R/MODA")
+```
+
 ## Overview
 
 Multi-Objective Decision Analysis (MODA) is a process for making decisions when there are very complex issues involving multiple criteria and multiple parties who may be deeply affected by the outcomes of the decisions.
