@@ -49,7 +49,7 @@ sensitivity_plot <- function(SAVF_matrix, weights, names, criteria, title=TRUE){
   Weight <- dplyr::quo(Weight)
   Value <- dplyr::quo(Value)
   
-  if(class(SAVF_matrix)[1] != "matrix") {
+  if((class(SAVF_matrix)[1]) != "matrix") {
     stop('SAVF_matrix must be a matrix\n',
          'You have provided an object of the following class:\n', 
          'SAVF_matrix: ', class(SAVF_matrix), '\n')

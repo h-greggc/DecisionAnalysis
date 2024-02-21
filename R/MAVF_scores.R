@@ -33,13 +33,13 @@
 
 MAVF_Scores <- function(SAVF_matrix, weights, names){
   
-  if(class(SAVF_matrix)[1] != "matrix") {
+  if((class(SAVF_matrix)[1]) != "matrix") {
     stop('SAVF_matrix must be a matrix\n',
          'You have provided an object of the following class:\n', 
          'SAVF_matrix: ', class(SAVF_matrix), '\n')
   }
   
-  if(class(weights) != "matrix"){
+  if(class(weights)[1] != "matrix"){
     
     if(class(weights) != "numeric") {
       stop('weights must be of class numeric\n',

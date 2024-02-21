@@ -40,17 +40,17 @@
 
 
 value_hierarchy_tree <- function(...,leaves,weights, 
-                         nodestyle="filled, rounded",nodeshape="box",nodefillcolor="white",nodefontname="helvetica",nodefontcolor="black",
-                         leavesshape="egg",leavesfillcolor="gray",leavesfontcolor="black", leavesfontname = "helvetica"){
+                                 nodestyle="filled, rounded",nodeshape="box",nodefillcolor="white",nodefontname="helvetica",nodefontcolor="black",
+                                 leavesshape="egg",leavesfillcolor="gray",leavesfontcolor="black", leavesfontname = "helvetica"){
   
   #Check if leaves is character
   if(class(leaves) != "character") {
     stop(
-         'leaves must be a character vector\n',
-         'You have provided an object of the following class:\n', 
-         'leaves: ', class(leaves), '\n')
+      'leaves must be a character vector\n',
+      'You have provided an object of the following class:\n', 
+      'leaves: ', class(leaves), '\n')
   }
-
+  
   #Check if any end nodes are not in the leaves vector
   if(!is.na(match("",leaves))) {
     stop('All end nodes must be in the leaves vector')
@@ -85,10 +85,9 @@ value_hierarchy_tree <- function(...,leaves,weights,
   
   #set leaves style for plot
   data.tree::Do(finaltree$leaves, 
-     function(node) data.tree::SetNodeStyle(node, shape = leavesshape, 
-                                 fillcolor = leavesfillcolor, fontcolor = leavesfontcolor, fontname = leavesfontname))
+                function(node) data.tree::SetNodeStyle(node, shape = leavesshape, 
+                                                       fillcolor = leavesfillcolor, fontcolor = leavesfontcolor, fontname = leavesfontname))
   #plot value hierarchy tree
   graphics::plot(finaltree)
   
 }
-
