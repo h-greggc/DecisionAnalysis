@@ -16,17 +16,27 @@ This tutorial uses the DecisionAnalysis::NFLcombine dataset that came from NFLSa
 knitr::opts_chunk$set(collapse = TRUE, 
                       fig.align = "center",
                       options(bitmapType='cairo'))
+                      
+# Update package list 2024-2-21
 library(dplyr)
 library(gridExtra)
 library(knitr)
 library(Cairo)
+library(DiagrammeR)
+library(devtools)
+library(tidyverse)
+library(grid)
+library(data.tree)
+library(DecisionAnalysis)
+library(lemon)
 ```
 
 ```{R}
+
 # Added to update to AWS vignette
 devtools::install_github("AFIT-R/MODA")
-```
 
+```
 ## Overview
 
 Multi-Objective Decision Analysis (MODA) is a process for making decisions when there are very complex issues involving multiple criteria and multiple parties who may be deeply affected by the outcomes of the decisions.
