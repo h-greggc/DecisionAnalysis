@@ -37,7 +37,7 @@
 
 MAVF_breakout <- function(SAVF_matrix, weights, names){
   
-  if(class(SAVF_matrix) != "matrix") {
+  if(class(SAVF_matrix)[1] != "matrix") {
     stop('SAVF_matrix must be a matrix\n',
          'You have provided an object of the following class:\n', 
          'SAVF_matrix: ', class(SAVF_matrix), '\n')
