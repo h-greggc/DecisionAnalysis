@@ -24,9 +24,9 @@ SAVF_linear_score <- function(x, x_low, x_mid, x_high, increasing = TRUE) {
   if(x_high<x_mid) {
     stop('The input for x_mid exceeds x_high')
   }
-
+for (i in  1:length(x)){
   if (increasing == TRUE) {
-    if (x <= x_mid) {
+    if (x[ <= x_mid) {
       value <- 0.5 * ((x - x_low) / (x_mid - x_low))
       return(value)
     } else {
@@ -41,4 +41,5 @@ SAVF_linear_score <- function(x, x_low, x_mid, x_high, increasing = TRUE) {
         return(value)
         }
     }
+}
 }
