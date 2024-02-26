@@ -33,7 +33,7 @@ for (i in  1:length(x)){
       value <- 0.5 + 0.5 * ((x - x_mid) / (x_high - x_mid))
       return(value)
     }} else {
-      if (x <= x_mid) {
+      if (x[i] <= x_mid) {
         value <- 1 - 0.5 * ((x - x_low) / (x_mid - x_low))
         return(value)
       } else {
