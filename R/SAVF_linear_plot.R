@@ -40,7 +40,7 @@ SAVF_linear_plot <- function(x, x_low, x_mid, x_high, increasing = TRUE) {
     df <- data.frame(x = c(x1,x2), v = c(v1,v2))
     ggplot2::ggplot(df) +
       ggplot2::geom_line(aes(x,v)) +
-      ggplot2::geom_point(aes(y = y_desired, x = x_desired),
+      ggplot2::annotate("point",y = y_desired, x = x_desired,
                  size = 3, color = "blue") +
       ggplot2::xlab("Raw Value") + ggplot2::ylab("SAVF Score")
   } else {
@@ -53,7 +53,7 @@ SAVF_linear_plot <- function(x, x_low, x_mid, x_high, increasing = TRUE) {
     df <- data.frame(x = c(x1,x2), v = c(v1,v2))
     ggplot2::ggplot(df) +
       ggplot2::geom_line(aes(x,v)) +
-      ggplot2::geom_point(aes(y = y_desired, x = x_desired),
+      ggplot2::annotate("point", y = y_desired, x = x_desired,
                  size = 3, color = "blue") +
       ggplot2::xlab("Raw Value") + ggplot2::ylab("SAVF Linear Score")
   }
