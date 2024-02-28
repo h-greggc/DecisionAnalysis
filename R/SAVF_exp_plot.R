@@ -46,7 +46,7 @@ SAVF_exp_plot <- function(x, x_low, x_mid, x_high, increasing = TRUE) {
     df <- data.frame(x = x, v = v)
     ggplot2::ggplot(df, ggplot2::aes(x,v)) +
       ggplot2::geom_line() +
-      ggplot2::geom_point(ggplot2::aes(y = y_desired, x = x_desired), size = 3,
+      ggplot2::annotate("point", y = y_desired, x = x_desired, size = 3,
                  color = "blue") +
       ggplot2::xlab("Raw Value") + ggplot2::ylab("SAVF Score")
   } else {
@@ -58,7 +58,7 @@ SAVF_exp_plot <- function(x, x_low, x_mid, x_high, increasing = TRUE) {
     df <- data.frame(x = x, v = v)
     ggplot2::ggplot(df, ggplot2::aes(x,v)) +
       ggplot2::geom_line() +
-      ggplot2::geom_point(aes(y = y_desired, x = x_desired), size = 3,
+      ggplot2::annotate("point", y = y_desired, x = x_desired, size = 3,
                  color = "blue") +
       ggplot2::xlab("Raw Value") + ggplot2::ylab("SAVF Exponential Score")
   }
